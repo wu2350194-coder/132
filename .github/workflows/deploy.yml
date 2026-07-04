@@ -18,9 +18,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Prepare static portfolio
+        run: |
+          mkdir github-pages-dist
+          cp index.html github-pages-dist/
+          cp -R public github-pages-dist/public
+          touch github-pages-dist/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: github-pages-dist
       - id: deployment
         uses: actions/deploy-pages@v4
     environment:
