@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.vite/
+.DS_Store
+Thumbs.db
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+resume_ai_preview-*.png
+
+# Local packaging and review artifacts
+teacher-package/
+resume_render_check/
+*.zip
+
+# Large editable source documents that are not needed for the website build
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.pdf
